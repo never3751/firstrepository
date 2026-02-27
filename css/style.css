@@ -6,7 +6,7 @@
 
 body {
     font-family: Montserrat-Regular, sans-serif;
-    overflow-x: hidden; /* Защита от случайного горизонтального скролла */
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -830,4 +830,5 @@ input[type="file"] {
         gap: 40px;
         margin-top: 60px;
     }
+
 }
