@@ -42,7 +42,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
 }
 
 .header__left img {
@@ -50,12 +58,19 @@ body {
     height: auto;
 }
 
-.nav__ul {
-    margin-left: 48px;
+.nav {
     display: flex;
-    width: auto;
+    justify-content: center;
+    order: 2;
+}
+
+.nav__ul {
+    display: flex;
     gap: 24px;
+    margin: 0;
     padding: 0;
+    list-style: none;
+    align-items: center;
 }
 
 .headline3 {
@@ -638,38 +653,47 @@ input[type="file"] {
     text-align: center;
     margin-top: 10px;
 }
-/* Адаптив для iPhone 12 Pro и схожих смартфонов */
 @media screen and (max-width: 430px) {
     
-    /* 1. Общие настройки */
     .container {
         padding: 0 15px;
     }
 
-    /* 2. Шапка (Header) */
     .header {
         flex-direction: column;
+        align-items: center;
         gap: 15px;
-        text-align: center;
     }
 
     .header__left {
-        flex-direction: column;
-        gap: 10px;
+        text-align: center;
+    }
+
+    .nav {
+        width: 100%;
     }
 
     .nav__ul {
-        margin-left: 0;
+        flex-direction: column;
         gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav__ul li {
+        width: 100%;
+    }
+
+    .label {
+        font-size: 12px;
     }
 
     .headline3 {
-        font-size: 22px;
+        font-size: 20px;
+        white-space: normal;
+        text-align: center;
     }
 
-    /* 3. Первый экран (Hero) */
     .main_hero {
         margin-top: 30px;
         flex-direction: column;
@@ -677,7 +701,7 @@ input[type="file"] {
     }
 
     .headline1 {
-        font-size: 32px; /* Уменьшаем гигантский шрифт */
+        font-size: 32px;
         line-height: 1.1;
     }
 
@@ -686,7 +710,6 @@ input[type="file"] {
         margin-bottom: 24px;
     }
 
-    /* 4. Секция с карточками */
     .main_text {
         font-size: 28px;
         line-height: 1.2;
@@ -695,12 +718,12 @@ input[type="file"] {
     }
 
     .card {
-        height: auto; /* Убираем фиксированную высоту */
+        height: auto;
         width: 100%;
     }
 
     .table {
-        position: relative; /* На мобилках лучше выстроить в поток */
+        position: relative;
         top: 0;
         left: 0;
         margin: 20px auto;
@@ -709,18 +732,16 @@ input[type="file"] {
         padding: 20px;
     }
 
-    /* 5. Преимущества (poch) */
     .text_poch {
         font-size: 28px;
         margin-top: 60px;
     }
 
     .poch_1, .poch_2, .poch_3 {
-        border-radius: 64px 32px 32px 32px; /* Уменьшаем скругление */
+        border-radius: 64px 32px 32px 32px;
         max-width: 100%;
     }
 
-    /* 6. Футер преимуществ */
     .footer_poch {
         flex-direction: column;
         border-radius: 32px 64px 32px 32px;
@@ -729,7 +750,6 @@ input[type="file"] {
         padding: 40px 20px;
     }
 
-    /* 7. Форма заказа по фото */
     .zakaz_photo {
         margin-top: 60px;
         gap: 20px;
@@ -741,17 +761,15 @@ input[type="file"] {
         text-align: center;
     }
 
-    /* 8. Процесс заказа (Этапы) */
     .order_proc {
-        grid-template-columns: 1fr; /* Одна колонка */
-        gap: 60px; /* Большой зазор, чтобы кружки не накладывались */
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
 
     .card_proc {
         width: 100%;
     }
 
-    /* 9. Отзывы */
     .title_otziv {
         font-size: 28px;
         margin-top: 60px;
@@ -760,7 +778,7 @@ input[type="file"] {
     .card_otziv {
         max-width: 340px;
         margin: 0 auto;
-        border-radius: 64px 32px 32px 32px; /* Уменьшаем радиус для мобилки */
+        border-radius: 64px 32px 32px 32px;
     }
 
     .main_otziv {
@@ -769,7 +787,6 @@ input[type="file"] {
         padding: 0 10px;
     }
 
-    /* 10. Заявка и Блог */
     .zayavka {
         flex-direction: column;
         margin-top: 60px;
@@ -785,7 +802,6 @@ input[type="file"] {
         height: auto;
     }
 
-    /* 11. Карта и GPS */
     .gps {
         flex-direction: column-reverse;
     }
@@ -800,7 +816,6 @@ input[type="file"] {
         border-radius: 32px 64px 32px 32px;
     }
 
-    /* 12. Финальный призыв и Футер */
     .zakazik {
         border-radius: 64px 32px 32px 32px;
     }
