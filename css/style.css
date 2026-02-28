@@ -59,8 +59,6 @@ body {
 }
 
 .nav {
-    display: flex;
-    justify-content: center;
     order: 2;
 }
 
@@ -832,5 +830,6 @@ input[type="file"] {
     }
 
 }
+
 
 
