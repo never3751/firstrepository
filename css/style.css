@@ -653,7 +653,7 @@ input[type="file"] {
     text-align: center;
     margin-top: 10px;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 390px) {
     
     .container {
         padding: 0 15px;
@@ -832,3 +832,4 @@ input[type="file"] {
     }
 
 }
+
